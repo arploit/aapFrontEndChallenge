@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.nav-container {
+  background-color: rgb(160, 0, 40);
+  height: 5rem;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+#nav {
+  background-color: rgb(204, 0, 51);
+  height: 2.5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0.3rem;
+}
+
+.black-box {
+  background-color: #303030;
+  width: 7rem;
+  z-index: 100;
+  height: 2.5rem;
+  position: fixed;
+  border: solid 1px #303030;
+  border-radius: 5px;
+  margin-right: auto;
+}
+.searchContainer {
+  margin-left: 35%;
+  display: grid;
+  grid-template-columns: 1.5rem 4fr;
+  width: 30rem;
+  background-color: rgb(160, 0, 40);
+  border: solid 1px rgb(160, 0, 40);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchContainer:focus-within i {
+  display: none;
+}
+
+.searchContainer:focus-within .searchBox {
+  grid-column: 1/4;
+}
+
+.searchContainer:focus-within .searchBox::placeholder {
+  color: transparent;
+}
+
+.searchIcon {
+  padding: 0.3rem 0 0.3rem 0.1rem;
+  grid-row: 1;
+  grid-column: 1/2;
+  z-index: 2;
+}
+
+.searchBox {
+  border: 0;
+  padding-left: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  grid-column: 2/4;
+  grid-row: 1;
+  background-color: rgb(160, 0, 40);
+  border: solid 1px rgb(160, 0, 40);
+  width: 30rem;
+
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 5px;
+  outline: none;
+}
+
+.main-window {
+  margin-top: 5rem;
+  height: 100vh;
+}
+
+.image-container {
+  background-image: url(./images/B&W_bg.jpg);
+  background-size: cover;
+  display: grid;
+  grid-template-areas: textArea ImageArea;
+}
+
+.image-container .text {
+  color: black;
+  max-width: 30rem;
+  margin-left: 10px;
+  padding: 1rem;
+  grid-area: textArea;
+  position: absolute;
+  color: white;
+}
+
+.image-container img {
+  color: black;
+  max-width: 30rem;
+  margin-left: auto;
+  grid-area: ImageArea;
+
+  margin-bottom: 15px;
+}
+
+.color-grid {
+  display: grid;
+  top: -4%;
+  position: relative;
+
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.color-grid div {
+  width: 15rem;
+
+  height: 10rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  color: white;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.footer {
+  display: grid;
+  position: relative;
+  background-color: rgb(0 0 0 /85%);
+  height: 25rem;
+  top: -30%;
+  padding: 2rem;
+  color: white;
+  grid-template-columns: repeat(2, 1fr);
+
+  justify-items: center;
+}
